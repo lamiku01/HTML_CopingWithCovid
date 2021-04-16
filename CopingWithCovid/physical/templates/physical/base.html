@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" type = "text/css" href={% static 'physical/main.css' %}>
 
+    <link rel="stylesheet" href={% static 'physical/gratitude-tracker.css' %}>
+
+
     {% if title %}
         <title>Physical Health - {{ title }}</title>
     {% else %}
@@ -92,6 +95,16 @@
         </div>
         </div>
       </div>
+       <div id="gratitude-tracker" class="my-list">
+        <em id="gratitude-tracker-name">
+          Gratitude Tracker!
+        </em>
+        <ul id="gratitude-tracker-storage"></ul>
+        <input type="text" id="gratitude-tracker-text-input">
+        <button type="button" class="btn btn-primary" onclick="addGratitudeElement()">Add</button>
+      </div>
+
+      <script src={% static 'physical/gratitude-tracker.js' %}></script>
     </main>
     <div class="page-prefooter">
     <div class="container">
